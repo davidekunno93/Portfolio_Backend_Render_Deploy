@@ -6,7 +6,7 @@ api = Blueprint('api', __name__, url_prefix='/api')
 @api.get('/project-previews')
 def project_previews():
     projects = Projects.query.all()
-    fithub = Projects.query.filter_by(title="FitHub").first()
+    fithub = Projects.query.filter_by(title="FitHub App").first()
     pokemon = Projects.query.filter_by(title="Pokemon Battle X").first()
     realpeace = Projects.query.filter_by(title="RealPeace Website").first()
     p_list = [p.to_dict() for p in projects]
